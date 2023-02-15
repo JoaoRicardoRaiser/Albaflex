@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albaflex.WebApi", "Albaflex.WebApi\Albaflex.WebApi.csproj", "{0128686A-F83B-42C1-A695-3B68914FA24F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9CFF39FA-8B5D-40F6-8E1C-2A92CD5B9007} = {9CFF39FA-8B5D-40F6-8E1C-2A92CD5B9007}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albaflex.Services", "Albaflex.Services\Albaflex.Services.csproj", "{F56B1558-45C7-4B70-B0C1-64A7BFBF2D38}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albaflex.CrossCutting", "Albaflex.CrossCutting\Albaflex.CrossCutting.csproj", "{468521C8-FC41-4617-888E-FABB0351476C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albaflex.Data", "Albaflex.Dados\Albaflex.Data.csproj", "{D044693D-19B3-493D-8437-458EAE8280D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albaflex.Database", "Albaflex.Database\Albaflex.Database.csproj", "{9CFF39FA-8B5D-40F6-8E1C-2A92CD5B9007}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albaflex.IoC", "Albaflex.IoC\Albaflex.IoC.csproj", "{1ED69DFF-0B77-4980-B799-DAF6279F7710}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0128686A-F83B-42C1-A695-3B68914FA24F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0128686A-F83B-42C1-A695-3B68914FA24F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0128686A-F83B-42C1-A695-3B68914FA24F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0128686A-F83B-42C1-A695-3B68914FA24F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F56B1558-45C7-4B70-B0C1-64A7BFBF2D38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F56B1558-45C7-4B70-B0C1-64A7BFBF2D38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F56B1558-45C7-4B70-B0C1-64A7BFBF2D38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F56B1558-45C7-4B70-B0C1-64A7BFBF2D38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{468521C8-FC41-4617-888E-FABB0351476C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{468521C8-FC41-4617-888E-FABB0351476C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{468521C8-FC41-4617-888E-FABB0351476C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{468521C8-FC41-4617-888E-FABB0351476C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D044693D-19B3-493D-8437-458EAE8280D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D044693D-19B3-493D-8437-458EAE8280D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D044693D-19B3-493D-8437-458EAE8280D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D044693D-19B3-493D-8437-458EAE8280D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CFF39FA-8B5D-40F6-8E1C-2A92CD5B9007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CFF39FA-8B5D-40F6-8E1C-2A92CD5B9007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CFF39FA-8B5D-40F6-8E1C-2A92CD5B9007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CFF39FA-8B5D-40F6-8E1C-2A92CD5B9007}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ED69DFF-0B77-4980-B799-DAF6279F7710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ED69DFF-0B77-4980-B799-DAF6279F7710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ED69DFF-0B77-4980-B799-DAF6279F7710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ED69DFF-0B77-4980-B799-DAF6279F7710}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59503532-B250-4236-8614-9A01F9AF34BE}
+	EndGlobalSection
+EndGlobal
