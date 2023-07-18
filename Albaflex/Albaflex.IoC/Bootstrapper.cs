@@ -19,12 +19,12 @@ namespace Albaflex.IoC
             services.AddScoped<DbContext, AlbaflexDbContext>();
             services.AddScoped<NotificationContext>();
 
-            services.AddScoped<TissueValidator>();
+            services.AddScoped<ProductValidator>();
             
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-            services.AddScoped<ITissueRepository, TissueRepository>();
-            services.AddScoped<ITissueService, TissueService>();
+            services.AddScoped<IProductRepository, TissueRepository>();
+            services.AddScoped<IProductService, ProductService>();
             
             return services;
         }
@@ -33,9 +33,9 @@ namespace Albaflex.IoC
         {
             services.AddFluentMigratorCore()
             .ConfigureRunner(rb => rb
-            .AddPostgres()
-            .WithGlobalConnectionString(DbInfoProvider.GetPostgresConnectionString())
-            .ScanIn(typeof(DbInfoProvider).Assembly).For.Migrations());
+                .AddPostgres()
+                .WithGlobalConnectionString(DbInfoProvider.GetPostgresConnectionString())
+                .ScanIn(typeof(DbInfoProvider).Assembly).For.Migrations());
 
             return services;
         }

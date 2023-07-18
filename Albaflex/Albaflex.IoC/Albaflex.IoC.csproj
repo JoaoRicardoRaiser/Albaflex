@@ -12,6 +12,7 @@
   </ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\Albaflex.Data\Albaflex.Data.csproj" />
 		<ProjectReference Include="..\Albaflex.Services\Albaflex.Services.csproj" />
 		<ProjectReference Include="..\Albaflex.Database\Albaflex.Database.csproj" />
 	</ItemGroup>

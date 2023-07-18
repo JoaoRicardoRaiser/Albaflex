@@ -7,17 +7,17 @@ namespace Albaflex.Database.Migrations
     {
         public override void Up()
         {
-            Create.Table("tissue")
-                .WithColumn("code").AsInt32().Unique().NotNullable().PrimaryKey()
+            Create.Table("product")
+                .WithColumn("id").AsGuid().Unique().NotNullable().PrimaryKey()
+                .WithColumn("code").AsInt32().Unique()
                 .WithColumn("name").AsString().NotNullable()
                 .WithColumn("value").AsDouble().NotNullable()
+                .WithColumn("type").AsString().NotNullable()
                 .WithColumn("created_at").AsDateTime().NotNullable()
                 .WithColumn("updated_at").AsDateTime().NotNullable();
         }
 
         public override void Down()
-        {
-            Delete.Table("tissue");
-        }
+            => Delete.Table("product");
     }
 }

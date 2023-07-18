@@ -7,29 +7,25 @@ using System.Net;
 
 namespace Albaflex.Services.Validators
 {
-    public class TissueValidator: AbstractValidator<CreateTissueInputModel>
+    public class ProductValidator: AbstractValidator<CreateProductInputModel>
     {
         private readonly NotificationContext _notificationContext;
 
-        public TissueValidator(NotificationContext notificationContext)
+        public ProductValidator(NotificationContext notificationContext)
         {
             _notificationContext = notificationContext;
-            RuleFor(t => t.Value).NotEqual(0).WithMessage($"The value of {nameof(Tissue)} couldn't be 0");
-            RuleFor(t => t.Name).NotNull().WithMessage($"The name of {nameof(Tissue)} couldn't be null");
-            RuleFor(t => t.Name).NotEmpty().WithMessage($"The name of {nameof(Tissue)} couldn't be empty");
+            RuleFor(t => t.Price).NotEqual(0).WithMessage($"The value of {nameof(Product)} couldn't be 0");
+            RuleFor(t => t.Description).NotNull().WithMessage($"The name of {nameof(Product)} couldn't be null");
+            RuleFor(t => t.Description).NotEmpty().WithMessage($"The name of {nameof(Product)} couldn't be empty");
         }
 
-        public override ValidationResult Validate(ValidationContext<CreateTissueInputModel> context)
+        public override ValidationResult Validate(ValidationContext<CreateProductInputModel> context)
         {
             var resultado = base.Validate(context);
 
             if (!resultado.IsValid)
-            {
                 foreach (var error in resultado.Errors)
-                {
                     _notificationContext.AddNotification(HttpStatusCode.BadRequest, error.ErrorMessage);
-                }
-            }
 
             return resultado;
         }

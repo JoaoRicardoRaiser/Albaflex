@@ -6,14 +6,10 @@
         public DateTime CreatedAt { get; protected set; } = DateTime.Now;
         public DateTime UpdatedAt { get; protected set; } = DateTime.Now;
 
-        public void SetId(Guid id)
-        {
-            Id = id;
-        }
+        public void SetId(Guid id) 
+            => Id = id;
 
-        public void UpdateAudit()
-        {
-            UpdatedAt = DateTime.Now;
-        }
+        public void UpdateAudit() 
+            => UpdatedAt = DateTime.Now;
     }
 }

@@ -14,11 +14,9 @@ namespace Albaflex.Data
 
         public async Task CommitAsync()
         {
-            var entities = _dbContext.ChangeTracker.Entries().Where(x => x.State == EntityState.Modified).Select(x => x.Entity).ToList();
+            var entities = _dbContext.ChangeTracker.Entries().Where(x => x.State == EntityState.Modified).Select(x => x.Entity);
             foreach (BaseEntity entity in entities.Cast<BaseEntity>())
-            {
                 entity.UpdateAudit();
-            }
 
             await _dbContext.SaveChangesAsync();
         }

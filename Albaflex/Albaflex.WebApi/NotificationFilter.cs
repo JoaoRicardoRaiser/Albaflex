@@ -16,7 +16,6 @@ namespace Albaflex.WebApi
 
         public async Task OnResultExecutionAsync(ResultExecutingContext context, ResultExecutionDelegate next)
         {
-
             context.HttpContext.Response.StatusCode = (int)(_notificationContext.HasErrorNotifications ? HttpStatusCode.BadRequest : HttpStatusCode.OK);
             context.HttpContext.Response.ContentType = "application/json";
 

@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Albaflex.Services.Interfaces
 {
-    public interface ITissueService
+    public interface IProductService
     {
-        Task CreateAsync(CreateTissueInputModel model);
+        Task CreateAsync(CreateProductInputModel model);
     }
 }

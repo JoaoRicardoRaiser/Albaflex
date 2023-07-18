@@ -1,11 +1,13 @@
 using Albaflex.IoC;
 using Albaflex.WebApi;
 using FluentMigrator.Runner;
+using Microsoft.AspNetCore.Builder;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen();
 builder.Services.AddBusinessServices();
 builder.Services.AddDatabaseConfiguration();
@@ -20,9 +22,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseRouting();
 app.UseAuthorization();
-
-app.MapControllers();
+app.UseEndpoints(x => x.MapControllers());
 
 var scope = app.Services.CreateScope();
 var serviceProvider = scope.ServiceProvider;

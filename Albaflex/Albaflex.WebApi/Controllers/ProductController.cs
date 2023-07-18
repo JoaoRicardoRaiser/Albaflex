@@ -6,19 +6,17 @@ namespace Albaflex.WebApi.Controllers
 {
     [Route("api/v1/product")]
     [ApiController]
-    public class TissueController
+    public class ProductController
     {
-        private readonly ITissueService _productService;
+        private readonly IProductService _productService;
 
-        public TissueController(ITissueService productService)
+        public ProductController(IProductService productService)
         {
             _productService = productService;
         }
 
         [HttpPost]
-        public async Task Post([FromBody] CreateTissueInputModel body)
-        {
-            await _productService.CreateAsync(body);
-        }
+        public async Task Post([FromBody] CreateProductInputModel body)
+            => await _productService.CreateAsync(body);
     }
 }

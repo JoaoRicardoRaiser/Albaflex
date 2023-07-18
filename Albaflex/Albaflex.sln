@@ -12,7 +12,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albaflex.Services", "Albafl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albaflex.CrossCutting", "Albaflex.CrossCutting\Albaflex.CrossCutting.csproj", "{468521C8-FC41-4617-888E-FABB0351476C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albaflex.Data", "Albaflex.Dados\Albaflex.Data.csproj", "{D044693D-19B3-493D-8437-458EAE8280D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albaflex.Data", "Albaflex.Data\Albaflex.Data.csproj", "{D044693D-19B3-493D-8437-458EAE8280D3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{468521C8-FC41-4617-888E-FABB0351476C} = {468521C8-FC41-4617-888E-FABB0351476C}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albaflex.Database", "Albaflex.Database\Albaflex.Database.csproj", "{9CFF39FA-8B5D-40F6-8E1C-2A92CD5B9007}"
 EndProject

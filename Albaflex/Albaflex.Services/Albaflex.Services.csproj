@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Albaflex.CrossCutting\Albaflex.CrossCutting.csproj" />
     <ProjectReference Include="..\Albaflex.Dados\Albaflex.Data.csproj" />
+    <ProjectReference Include="..\Albaflex.Data\Albaflex.Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>
